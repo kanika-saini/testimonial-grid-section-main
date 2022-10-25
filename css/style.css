@@ -1,0 +1,131 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /* 10 px*/
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  background-color: hsl(210, 46%, 95%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-container {
+  max-width: 120rem;
+  margin: 4rem;
+  display: grid;
+  grid-gap: 2.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* testimonials */
+.testimonial-1 {
+  background-color: hsl(263, 55%, 52%);
+  grid-column: 1 / span 2;
+  grid-row: 1/2;
+  position: relative;
+  z-index: 1;
+}
+.testimonial-1::after {
+  content: "" url(../images/bg-pattern-quotation.svg);
+  position: absolute;
+  top: 0;
+  right: 7rem;
+
+  z-index: -1;
+}
+.testimonial-2 {
+  background-color: hsl(217, 19%, 35%);
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.testimonial-3 {
+  background-color: hsl(0, 0%, 100%);
+  grid-column: 4/-1;
+  grid-row: 1/3;
+}
+.testimonial-4 {
+  background-color: hsl(0, 0%, 100%);
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.testimonial-5 {
+  background-color: hsl(219, 29%, 14%);
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+.testimonial {
+  padding: 3.5rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* testimonial images  */
+.testimonial-detail {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+.testimonial-img {
+  display: block;
+  width: 4rem;
+  border-radius: 50%;
+}
+.testimonial-img-1,
+.testimonial-img-2 {
+  border: 2px solid hsl(0, 0%, 81%);
+}
+.testimonial-img-3,
+.testimonial-img-4 {
+  border: 2px solid hsla(217, 19%, 35%, 0.7);
+}
+.testimonial-img-5 {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+.testimonial-name {
+  margin-bottom: 0.4rem;
+}
+.testimonial-verification {
+  color: hsl(0, 0%, 81%);
+}
+.testimonial-heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.testimonial-text {
+  font-size: 1.3rem;
+  color: hsl(0, 0%, 81%);
+  line-height: 1.6;
+}
+
+.testimonial-3 .testimonial-heading,
+.testimonial-4 .testimonial-heading {
+  color: hsl(219, 29%, 14%);
+}
+.testimonial-3 .testimonial-name,
+.testimonial-4 .testimonial-name {
+  color: hsl(219, 29%, 14%, 0.9);
+}
+.testimonial-3 .testimonial-text,
+.testimonial-4 .testimonial-text {
+  color: hsla(217, 19%, 35%, 0.7);
+}
+.testimonial-3 .testimonial-verification,
+.testimonial-4 .testimonial-verification {
+  color: hsla(217, 19%, 35%, 0.7);
+}
